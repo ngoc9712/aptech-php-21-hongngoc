@@ -1,0 +1,56 @@
+.Flag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Flag__First, .Flag__Second, .Flag__Third {
+  height: 100px;
+  width: 33.33%;
+}
+
+.Flag__First {
+  background-color: black;
+}
+
+.Flag__Second {
+  background-color: yellow;
+}
+
+.Flag__Third {
+  background-color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .Flag .Flag__First, .Flag .Flag__Second, .Flag .Flag__Third {
+    width: 100%;
+  }
+  .Flag .Flag__First {
+    background-color: red;
+  }
+  .Flag .Flag__Second {
+    background-color: white;
+  }
+  .Flag .Flag__Third {
+    background-color: blue;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Flag .Flag {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Flag__First {
+    background-color: black;
+  }
+  .Flag__Second {
+    background-color: red;
+  }
+  .Flag__Third {
+    background-color: yellow;
+  }
+}
+/*# sourceMappingURL=hn.css.map */

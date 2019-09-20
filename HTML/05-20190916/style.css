@@ -1,0 +1,13 @@
+a:hover{
+    text-decoration: none;
+    border-bottom-color: grey : !important;
+}
+.Header__First-Row__Second-Column__Ul__Li__Anchor{
+    border-bottom-width: 4px !important;
+    border-block-start-style: solid;
+    border-bottom-color: transparent;
+    padding-bottom: 8px;
+}
+.Header__First-Row__Second-Column__Ul__Li__Anchor--Active{
+    border-bottom-color: white;
+}

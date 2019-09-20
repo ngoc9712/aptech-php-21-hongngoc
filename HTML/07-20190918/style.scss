@@ -1,0 +1,52 @@
+.Flag{
+display: flex;
+
+&__First,
+&__Second,
+&__Third {
+    height: 100px;
+    width: 33.33%;
+
+}
+&__First{
+    background-color: black;
+}
+&__Second{
+    background-color: yellow;
+}
+&__Third{
+    background-color: red;
+}
+@media screen and(max-width: 1000px) {
+  .Flag{
+    &__First,
+    &__Second,
+    &__Third {
+        width: 100%; 
+  }  
+  &__First{
+    background-color: red;
+}
+&__Second{
+    background-color: white;
+}
+&__Third{
+    background-color:blue;
+}
+}
+}
+@media screen and(max-width: 500px) {
+    .Flag{
+      flex-direction: column;
+    }  
+    &__First{
+      background-color: black;
+  }
+  &__Second{
+      background-color: red;
+  }
+  &__Third{
+      background-color:yellow;
+  }
+  }
+  }
