@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container h-100 justify-content-center algin-items-center mt-4">
+        <div class="row h-100">
+            <div class="col h-100 d-flex flex-column justify-content-center align-items-center">
+                <h2 aria-hidden="true"></i> What Can JavaScript Do?</h2>
+                    <p>JavaScript can change HTML attribute values.</p>
+                    
+                    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+                <img src="./pic_bulbon.gif" alt="light" id="idLight">
+                <button class="btn btn-outline-primary mt-4" id="idButton">Turn on the light</button>
+                <button class="btn btn-outline-primary mt-4" id="idButton">Turn off the light</button>
+               
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#idButton').click(function(){
+                if($('#idLight').attr("src").toLowerCase().indexOf('off') > -1){
+                    $('#idLight').attr("src", "./pic_bulboff.gif");
+                   
+                    $('#idButton').text("Turn off the light");
+                }
+                else {
+                    $('#idLight').attr("src", "./pic_bulbon.gif");
+                 
+                    $('#idButton').text("Turn on the light");
+                }
+            })
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

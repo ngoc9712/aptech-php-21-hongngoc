@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="n"> Profile </h1>
+    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="n.inten()">Click!!</button>
+    <script>   
+    var n = {
+        name : "Nguyen Hong Ngoc",
+        age : 22,
+      
+        inten:function(ten){
+           return {
+               trangthai: "Be" + ten + "happy"
+           };
+         
+        }
+    };
+    console.log(n.inten('Ngoc').trangthai);
+    </script>
+</body>
+
+</html>
