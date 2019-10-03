@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+</head>
+<body>
+    <h1 id="demo">Ngoc Ngoc </h1>
+    <button onclick="loadDulieu();">Click me !! </button>
+    <script>
+    function loadDulieu(){
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function(){
+            if(http.readyState == 1){
+                console.log('Bat dau du lieu');
+            }
+            if(http.readyState ==2 ){
+                console.log('Da tim thay du lieu')
+            }
+            if(http.readyState == 3 ){
+                console.log('Dang xu ly')
+            }
+            if(http.readyState == 4 && http.status == 200 ){
+             document.getElementById('demo').innerHTML=http.responseText;
+            }
+        }
+        http.open("GET",'ngoc.txt',true);
+        http.send();
+    }
+    </script>
+</body>
+</html>

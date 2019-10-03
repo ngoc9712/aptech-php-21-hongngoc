@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password </th>
+        </thead>
+        <tbody id=table-Body>
+
+        </tbody>
+    </table>
+    <button onclick="themDulieu();">Click để thêm dữ liệu </button>
+    <script>
+        function themDulieu() {
+            var dulieuBang = [
+                [1, 'a', 'b', 'c'],
+                [2, 'd', 'e', 'f'],
+                [3, 'g', 'h', 'j']
+            ];
+            for (var i = 0; i < 3; i++) {
+                var tableRow = document.createElement('tr');
+                tableRow.setAttribute('id', 'tr-' + i);
+                var tableBody = document.getElementById('table-Body');
+                tableBody.appendChild(tableRow);
+                for (var j = 0; j < 4; j++) {
+                    var data = document.createElement('td');
+                    data.innerHTML = dulieuBang[i][j];
+                    tableRow.appendChild(data);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
