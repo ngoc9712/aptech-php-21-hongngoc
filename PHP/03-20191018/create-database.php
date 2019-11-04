@@ -27,12 +27,18 @@ echo '<br> Ket noi thanh cong';
     email varchar(255),
     password varchar(10)
     )";
-    if (mysqli_query($conn,$sql)){
+$sql = "CREATE TABLE ap_21_4.role(
+    id_ro INT,
+    name varchar(50) )";
+     if (mysqli_query($conn,$sql)){
         echo "TAO BANG THANH CONG";
     } else {
         echo "Error " ;
     }
-
+$sql = "INSERT INTO ap_21_4.role (id_ro, name)
+VALUES (1,'Admin'),
+        (2,'User'),
+        (3,'Guest')";
 $sql  = "INSERT INTO ap_21_4.users ( id,Email,password)
 VALUES (1,'nngoc6215@gmail.com',1234),
        (2,'nngoc123@gmail.com',1234),
